@@ -1,16 +1,13 @@
-# This is a sample Python script.
+a = int(input())
+mins_start = 510 + (a - 1) * 55
+mins_end = 555 + (a - 1) * 55
+minutes_s = str(mins_start % 60)
+minutes_e = str(mins_end % 60)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+if len(minutes_e) < 2:
+    minutes_e = '0' + minutes_e
 
+if len(minutes_s) < 2:
+    minutes_s = '0' + minutes_s
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print('Начало: ' + str(mins_start // 60) +':' + minutes_s, 'Конец: ' + str(mins_end // 60) +':' + minutes_e)
